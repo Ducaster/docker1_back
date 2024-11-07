@@ -8,12 +8,12 @@ const snacks = require("./routes/snacks");
 const bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT;
-
+const GUESTBOOK_DB_ADDR = "192.168.56.100:17017";
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(
   cors({
-    origin: "front_snack:3001", // 프론트엔드 도메인 주소로 수정
+    origin: "http://localhost:3001", // 프론트엔드 도메인 주소로 수정
     credentials: true, // 쿠키를 포함한 요청 허용
   })
 );

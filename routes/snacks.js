@@ -1,7 +1,7 @@
 // snacks.js 파일의 수정
 const mongoose = require("mongoose");
 
-const GUESTBOOK_DB_ADDR = process.env.GUESTBOOK_DB_ADDR;
+const GUESTBOOK_DB_ADDR = "192.168.56.100:17017"; //process.env.GUESTBOOK_DB_ADDR;
 const mongoURI = "mongodb://" + GUESTBOOK_DB_ADDR + "/snacks";
 
 const db = mongoose.connection;
